@@ -25,7 +25,7 @@ python train.py
 Please see the arguments in the .py file to make input argument changes if you need. 
 
 ## Inference
-Once you download pretrained model weights from [here](https://drive.google.com/file/d/1Ovf4KpZ0pjEyDstt7fA7HNQkcN7fg2Vj/view?usp=sharing) to the `./InferenceModel` folder, you can use the following script to obtain cartilage segmentation of knee MR images located under `./data/test`:
+Once you download pretrained model weights from [here](https://drive.google.com/file/d/1x9ET75IJuL-y64kHOa718PDKu3vTxQ_H/view) to the `./InferenceModel` folder, you can use the following script to obtain cartilage segmentation of knee MR images located under `./data/test`:
 ```bash
 python inference.py 
 ```
