@@ -6,10 +6,13 @@ This repo contains the implementation of the deep learning-based knee MRI cartil
 [![license](https://img.shields.io/badge/license-AGPL--3.0-brightgreen)](https://github.com/denizlab/2019_IWOAI_Challenge/blob/master/LICENSE)
 
 ## Instructions
-1. Please refer to `requirements.txt` to install all dependencies for this project. 
+1. Please refer to IBM Power machine's "PowerAI 1.6.0" conda environment with the dependencies provided in `requirements.txt`. For Linux machines, please use the `requirements.yml` file to create a Conda environment:  
+```bash
+conda env create -f requirements.yml
+```
 2. `./data` folder contains subfolders named `./train`, `./test` , and `./valid` which needs to include train, test and validation set images and segmentation maps, respectively. To request the dataset used for the IWOAI challenge, please contact [Dr. Chaudhari](mailto:akshaysc@stanford.edu). 
 3. Once you have data ready, you can use `train.py` to train a segmentation model with predefined settings that were used on model training for submission to the IWOAI challenge. Trained models will be saved within the folder named `./TrainedModels` 
-5. Use `inference.py` file to obtain knee MRI cartilage segmentation by using our pretrained model. MR images located inside `./data/test` folder will be used to produce cartilage segmentation maps. 
+4. Use `inference.py` file to obtain knee MRI cartilage segmentation by using our pretrained model. MR images located inside `./data/test` folder will be used to produce cartilage segmentation maps. 
 
 ## Repo Structure
 * `./data`: Folder for knee MR images and cartilage segmentation that will be used for training.
@@ -40,14 +43,16 @@ If you found this code useful, please cite our paper (our team is highlighted in
 
 *The International Workshop on Osteoarthritis Imaging Knee MRI Segmentation Challenge: A Multi-Institute Evaluation and Analysis Framework on a Standardized Dataset*
 Arjun D. Desai, Francesco Caliva, Claudia Iriondo, Naji Khosravan, Aliasghar Mortazi, Sachin Jambawalikar, Drew Torigian, Jutta Ellermann, Mehmet Akcakaya, Ulas Bagci, Radhika Tibrewala, Io Flament, Matthew O' Brien, Sharmila Majumdar, Mathias Perslev, Akshay Pai, Christian Igel, Erik B. Dam, Sibaji Gaj, Mingrui Yang, Kunio Nakamura, Xiaojuan Li, **Cem M. Deniz, Vladimir Juras, Ravinder Regatte**, Garry E. Gold, Brian A. Hargreaves, Valentina Pedoia, Akshay S. Chaudhari
-Arxiv
-2019
+Radiology: Artificial Intelligence
+2021 3:3
 ```
-@article{desai2019IWOAI,
+@article{desai2021IWOAI,
     title = {The International Workshop on Osteoarthritis Imaging Knee MRI Segmentation Challenge: A Multi-Institute Evaluation and Analysis Framework on a Standardized Dataset},
     author = {Arjun D. Desai, Francesco Caliva, Claudia Iriondo, Naji Khosravan, Aliasghar Mortazi, Sachin Jambawalikar, Drew Torigian, Jutta Ellermann, Mehmet Akcakaya, Ulas Bagci, Radhika Tibrewala, Io Flament, Matthew O' Brien, Sharmila Majumdar, Mathias Perslev, Akshay Pai, Christian Igel, Erik B. Dam, Sibaji Gaj, Mingrui Yang, Kunio Nakamura, Xiaojuan Li, **Cem M. Deniz**, Vladimir Juras, Ravinder Regatte, Garry E. Gold, Brian A. Hargreaves, Valentina Pedoia, Akshay S. Chaudhari}, 
-    journal = {Arxiv},
-    year = {2019},
-    URL = {https://arxiv.org/abs/2004.14003}
+    journal = {Radiology: Artificial Intelligence},
+    year = {2021},
+    volume = {3},
+    number = {3}
+    URL = {https://doi.org/10.1148/ryai.2021200078}
 }
 ```
